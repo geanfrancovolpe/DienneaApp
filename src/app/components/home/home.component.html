@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="row">
+      <div *ngFor="let movie of movies.results;let i = index" class="col-lg-4 card-outter">
+          <div class="movie-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                      <table class="table table-borderless">
+                          <thead>
+                              <tr>
+                                  <th>{{ movie.original_title }}</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Quentin Tarantino</td>  <!-- Questa API non ritorna un regista nella risposta. Quindi ho inserito a Quentin in tutti i registri -->
+                            </tr>
+                            <tr>
+                              <td>{{ movie.release_date | date }}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="http://image.tmdb.org/t/p/w185/{{ movie.poster_path }}">
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
