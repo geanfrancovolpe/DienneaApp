@@ -8,7 +8,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HomeComponent implements OnInit {
 
-  movies:any = [];
+  movies:any = {};
 
   constructor( private moviesService: MoviesService ) { }
 
